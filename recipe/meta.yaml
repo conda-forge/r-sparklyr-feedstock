@@ -1,4 +1,4 @@
-{% set version = '0.5.4' %}
+{% set version = '0.7.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/sparklyr_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/sparklyr/sparklyr_{{ version }}.tar.gz
-  sha256: 571472524d368308fbc2a1269bfdbf4ba9484f3e382a22501b8d0e696df84e98
+  sha256: 0825cfd4903acd4d89d2d4032f475e4a1c3cc595c6c2486b3302a9f3692fd653
 
 build:
   number: 0
@@ -24,35 +24,49 @@ build:
 requirements:
   build:
     - r-base
-    - r-dbi >=0.6
+    - r-dbi >=0.6_1
     - r-assertthat
     - r-base64enc
-    - r-config
+    - r-broom
+    - r-config >=0.2
+    - r-dbplyr >=1.1.0
     - r-digest
-    - r-dplyr >=0.5.0
-    - r-httr
-    - r-jsonlite
+    - r-dplyr >=0.7.2
+    - r-httr >=1.2.1
+    - r-jsonlite >=1.4
     - r-lazyeval >=0.2.0
+    - r-openssl >=0.8
     - r-rappdirs
-    - r-readr >=0.2.0
+    - r-readr >=1.1.0
+    - r-rlang >=0.1.4
     - r-rprojroot
+    - r-rstudioapi
+    - r-shiny >=1.0.1
     - r-withr
+    - r-xml2
 
   run:
     - r-base
-    - r-dbi >=0.6
+    - r-dbi >=0.6_1
     - r-assertthat
     - r-base64enc
-    - r-config
+    - r-broom
+    - r-config >=0.2
+    - r-dbplyr >=1.1.0
     - r-digest
-    - r-dplyr >=0.5.0
-    - r-httr
-    - r-jsonlite
+    - r-dplyr >=0.7.2
+    - r-httr >=1.2.1
+    - r-jsonlite >=1.4
     - r-lazyeval >=0.2.0
+    - r-openssl >=0.8
     - r-rappdirs
-    - r-readr >=0.2.0
+    - r-readr >=1.1.0
+    - r-rlang >=0.1.4
     - r-rprojroot
+    - r-rstudioapi
+    - r-shiny >=1.0.1
     - r-withr
+    - r-xml2
 
 test:
   commands:
