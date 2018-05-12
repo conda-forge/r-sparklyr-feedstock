@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/sparklyr_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/sparklyr/sparklyr_{{ version }}.tar.gz
-  sha256: b73a459011144233d2dddfbbbe0f941407a91ba2c46a1cfcf39c5f921bb9f37a
+  sha256: 939ff68ac1851bff25ccffcf79f27060f1a0ed2fbe18e04da149b64f1d141a2e
 
 build:
   number: 0
