@@ -10,19 +10,22 @@ package:
 source:
   fn: sparklyr_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/sparklyr_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/sparklyr/sparklyr_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/sparklyr_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/sparklyr/sparklyr_{{ version }}.tar.gz
   sha256: 939ff68ac1851bff25ccffcf79f27060f1a0ed2fbe18e04da149b64f1d141a2e
 
 build:
+  merge_build_host: True  # [win]
   number: 0
-  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+
+  host:
     - r-base
     - r-dbi >=0.6_1
     - r-assertthat
@@ -42,6 +45,7 @@ requirements:
     - r-rprojroot
     - r-rstudioapi
     - r-shiny >=1.0.1
+    - r-tidyr
     - r-withr
     - r-xml2
 
@@ -65,20 +69,21 @@ requirements:
     - r-rprojroot
     - r-rstudioapi
     - r-shiny >=1.0.1
+    - r-tidyr
     - r-withr
     - r-xml2
 
 test:
   commands:
-    - $R -e "library('sparklyr')"  # [not win]
+    - $R -e "library('sparklyr')"           # [not win]
     - "\"%R%\" -e \"library('sparklyr')\""  # [win]
 
 about:
   home: http://spark.rstudio.com
   license: Apache 2.0
   summary: |
-    R interface to Apache Spark, a fast and general engine for big data processing.
-    This package supports connecting to local and remote
+    R interface to Apache Spark, a fast and general engine for big data processing, see
+    <http://spark.apache.org>. This package supports connecting to local and remote
     Apache Spark clusters, provides a 'dplyr' compatible back-end, and provides an interface
     to Spark's built-in machine learning algorithms.
   license_family: APACHE
