@@ -1,4 +1,4 @@
-{% set version = '0.8.4' %}
+{% set version = '0.9.2' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -8,15 +8,14 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: sparklyr_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/sparklyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sparklyr/sparklyr_{{ version }}.tar.gz
-  sha256: 7d43e7ec3abc29e2d5885c1a8f52bd3f41a18e69016690517f1e7362087abfbe
+  sha256: 108099b796c67a7f1526022ba00c052015351c3525ff1c6414da9de2cfed531a
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -35,16 +34,19 @@ requirements:
     - r-dbplyr >=1.1.0
     - r-digest
     - r-dplyr >=0.7.2
+    - r-forge
     - r-httr >=1.2.1
     - r-jsonlite >=1.4
     - r-lazyeval >=0.2.0
     - r-openssl >=0.8
+    - r-purrr
+    - r-r2d3
     - r-rappdirs
-    - r-readr >=1.1.0
     - r-rlang >=0.1.4
     - r-rprojroot
-    - r-rstudioapi
+    - r-rstudioapi >=0.6
     - r-shiny >=1.0.1
+    - r-tibble
     - r-tidyr
     - r-withr
     - r-xml2
@@ -59,16 +61,19 @@ requirements:
     - r-dbplyr >=1.1.0
     - r-digest
     - r-dplyr >=0.7.2
+    - r-forge
     - r-httr >=1.2.1
     - r-jsonlite >=1.4
     - r-lazyeval >=0.2.0
     - r-openssl >=0.8
+    - r-purrr
+    - r-r2d3
     - r-rappdirs
-    - r-readr >=1.1.0
     - r-rlang >=0.1.4
     - r-rprojroot
-    - r-rstudioapi
+    - r-rstudioapi >=0.6
     - r-shiny >=1.0.1
+    - r-tibble
     - r-tidyr
     - r-withr
     - r-xml2
