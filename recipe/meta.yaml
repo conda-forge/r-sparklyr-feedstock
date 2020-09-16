@@ -36,8 +36,10 @@ requirements:
     - r-forge
     - r-generics
     - r-globals
+    - r-glue
     - r-httr >=1.2.1
     - r-jsonlite >=1.4
+    - r-lifecycle
     - r-openssl >=0.8
     - r-purrr
     - r-r2d3
@@ -46,12 +48,15 @@ requirements:
     - r-rlang >=0.1.4
     - r-rprojroot
     - r-rstudioapi >=0.10
+    - r-stringr
     - r-tibble
     - r-tidyr
+    - r-tidyselect
     - r-uuid
+    - r-vctrs
     - r-withr
     - r-xml2
-  run:
+ run:
     - r-base
     - r-dbi >=0.6_1
     - r-assertthat
@@ -64,8 +69,10 @@ requirements:
     - r-forge
     - r-generics
     - r-globals
+    - r-glue
     - r-httr >=1.2.1
     - r-jsonlite >=1.4
+    - r-lifecycle
     - r-openssl >=0.8
     - r-purrr
     - r-r2d3
@@ -74,9 +81,12 @@ requirements:
     - r-rlang >=0.1.4
     - r-rprojroot
     - r-rstudioapi >=0.10
+    - r-stringr
     - r-tibble
     - r-tidyr
+    - r-tidyselect
     - r-uuid
+    - r-vctrs
     - r-withr
     - r-xml2
 
