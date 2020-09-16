@@ -56,7 +56,7 @@ requirements:
     - r-vctrs
     - r-withr
     - r-xml2
- run:
+  run:
     - r-base
     - r-dbi >=0.6_1
     - r-assertthat
