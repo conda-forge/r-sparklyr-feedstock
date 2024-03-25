@@ -1,4 +1,4 @@
-{% set version = "1.8.4" %}
+{% set version = "1.8.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sparklyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sparklyr/sparklyr_{{ version }}.tar.gz
-  sha256: 900dc20ee8d54c3fc5e0cd2b63f467196e39847065c949a003effe8870478375
+  sha256: e0532d35497f7855cdc6adb1b74d502f10a74058ff941f8435dc6f85b0f42f97
 
 build:
   merge_build_host: true  # [win]
