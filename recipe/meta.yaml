@@ -23,34 +23,23 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-dbi >=0.6_1
-    - r-assertthat
-    - r-base64enc
+    - r-dbi >=1.0.0
     - r-config >=0.2
-    - r-dbplyr >=1.1.0
-    - r-digest
-    - r-dplyr >=0.7.2
-    - r-ellipsis >=0.1.0
-    - r-forge
+    - r-dbplyr >=2.5.0
+    - r-dplyr >=1.0.9
     - r-generics
     - r-globals
     - r-glue
     - r-httr >=1.2.1
     - r-jsonlite >=1.4
-    - r-lifecycle
     - r-openssl >=0.8
     - r-purrr
-    - r-r2d3
-    - r-rappdirs
-    - r-rjson >=0.2.20
     - r-rlang >=0.1.4
-    - r-rprojroot
     - r-rstudioapi >=0.10
-    - r-stringr
-    - r-tibble
-    - r-tidyr
+    - r-tidyr >=1.2.0
     - r-tidyselect
     - r-uuid
     - r-vctrs
@@ -58,32 +47,20 @@ requirements:
     - r-xml2
   run:
     - r-base
-    - r-dbi >=0.6_1
-    - r-assertthat
-    - r-base64enc
+    - r-dbi >=1.0.0
     - r-config >=0.2
-    - r-dbplyr >=1.1.0
-    - r-digest
-    - r-dplyr >=0.7.2
-    - r-ellipsis >=0.1.0
-    - r-forge
+    - r-dbplyr >=2.5.0
+    - r-dplyr >=1.0.9
     - r-generics
     - r-globals
     - r-glue
     - r-httr >=1.2.1
     - r-jsonlite >=1.4
-    - r-lifecycle
     - r-openssl >=0.8
     - r-purrr
-    - r-r2d3
-    - r-rappdirs
-    - r-rjson >=0.2.20
     - r-rlang >=0.1.4
-    - r-rprojroot
     - r-rstudioapi >=0.10
-    - r-stringr
-    - r-tibble
-    - r-tidyr
+    - r-tidyr >=1.2.0
     - r-tidyselect
     - r-uuid
     - r-vctrs
