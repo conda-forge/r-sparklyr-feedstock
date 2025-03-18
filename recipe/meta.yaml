@@ -1,4 +1,4 @@
-{% set version = "1.8.6" %}
+{% set version = "1.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sparklyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sparklyr/sparklyr_{{ version }}.tar.gz
-  sha256: c3d89b42cb4df109ef4a9e19db1d94a5e9f0759796ad089b46bdc31c2287e3fa
+  sha256: d4e687bd1cc38a13449d2770e1818857f71d56a2f6dec26fbda588e26cd0b1ae
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
